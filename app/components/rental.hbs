@@ -1,0 +1,22 @@
+<article class="rental">
+    <Rental::Image
+    src="{{@rental.image}}"
+    alt="A picture of {{@rental.title}}"
+  />
+  <div class="details">
+    <h3>
+      <LinkTo @route="rental" @model={{@rental}}>
+        {{@rental.title}}
+      </LinkTo>
+    </h3>
+    <div class="detail owner">
+      <span>Owner:</span> {{@rental.brand}}
+    </div>
+    <div class="detail type">
+      <span>Type:</span> {{@rental.category}}
+    </div>
+    <div class="detail location">
+      <span>Price:</span> {{@rental.price}}
+    </div>
+  </div>
+</article>
